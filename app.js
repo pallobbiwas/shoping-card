@@ -50,27 +50,41 @@ function subTotal() {
     inTotal.innerText = Number(taxValue.innerText) + Number(subTotal.innerText);
     
 }
-//
+//case part
+//remove
 document.getElementById('remove-case-Button').addEventListener('click',function(){
-    removeIteam('case-part');
+    removeIteam('case-part','case-hide');
 
 });
-
-document.getElementById('hide').addEventListener('click',function(){
-    reShow ('case-part')
+// re addd
+document.getElementById('case-hide').addEventListener('click',function(){
+    reShow ('case-part','case-hide');
 });
+
+//phone part
+//remove
+document.getElementById('remove-phone-button').addEventListener('click',function(){
+    removeIteam('phone-part','phone-hide');
+
+});
+// re addd
+document.getElementById('phone-hide').addEventListener('click',function(){
+    reShow ('phone-part','phone-hide');
+});
+
+
 
 //remove iteam function
-function removeIteam(removeId){
+function removeIteam(removeId, addagain){
     const phonePart = document.getElementById(removeId);
     phonePart.style.display = 'none'
-    document.getElementById('hide').style.display = 'block'
+    document.getElementById(addagain).style.display = 'block'
 }
 
 //re showe iteam
 
-function reShow (hideId){
+function reShow (hideId, moveAgain){
     const phonePart = document.getElementById(hideId);
     phonePart.style.display = 'flex'
-    document.getElementById('hide').style.display = 'none'
+    document.getElementById(moveAgain).style.display = 'none'
 }
