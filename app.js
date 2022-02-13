@@ -1,4 +1,9 @@
+
+
+
 // case
+
+
 document.getElementById("case-increse").addEventListener("click",function(){
     multiplication("case-number", "case-price",59,true)
 });
@@ -88,3 +93,35 @@ function reShow (hideId, moveAgain){
     phonePart.style.display = 'flex'
     document.getElementById(moveAgain).style.display = 'none'
 }
+
+//cheek out part
+
+document.getElementById('cheek-out-button').addEventListener('click',function(){
+    // document.location.href = 'invoice.html'
+    const infoTable = document.getElementById('info-table');
+    const casecountNumber = document.getElementById('case-number');
+    const casecountPrice = document.getElementById('case-price');
+    const caseName = document.getElementById('case-name');
+    //phone
+    const phonecountNumber = document.getElementById('phone-number');
+    const phonecountPrice = document.getElementById('phone-price');
+    const phoneName = document.getElementById('phone-name');
+    const inTotal = document.getElementById('total');
+    //create table
+    const tr = document.createElement('tr')
+    const td1 = document.createElement('td')
+    const th = document.createElement('th')
+    const td2 = document.createElement('td')
+    const td3 = document.createElement('td')
+    //add value
+    td1.innerText = casecountNumber.value +" - "+ phonecountNumber.value;
+    th.innerText = caseName.innerText +' & '+ phoneName.innerText;
+    td2.innerText = casecountPrice.innerText +' + '+ phonecountPrice.innerText;
+    td3.innerText = inTotal.innerText
+    //append
+    tr.appendChild(td1)
+    tr.appendChild(th)
+    tr.appendChild(td2)
+    tr.appendChild(td3)
+    infoTable.appendChild(tr)
+})

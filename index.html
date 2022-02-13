@@ -18,12 +18,12 @@
          <h2>My shopping cart</h2>
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div  class="cart-item">
+               <div class="cart-item">
                   <button id="phone-hide" class="f-hide "> undo</button>
                   <div id="phone-part" class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
-                        <h5>iPhone 11 128GB Black</h5>
+                        <h5 id="phone-name">iPhone 11 128GB Black</h5>
                      </div>
 
                      <div class="col-md-5 center-item">
@@ -33,18 +33,19 @@
                            <button id="phone-increse" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5>$<span id="phone-price">000</span> </h5>
-                        <button id="remove-phone-button" class="button"><img src="images/remove.png" alt="" class="remove-item"></button>
+                        <button id="remove-phone-button" class="button"><img src="images/remove.png" alt=""
+                              class="remove-item"></button>
                      </div>
                   </div>
                </div>
 
-               <div  class="cart-item">
+               <div class="cart-item">
                   <button id="case-hide" class="f-hide "> undo</button>
                   <div id="case-part" class="row">
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
-                        
-                        <h5>iPhone 11 Silicone Case - Black</h5>
+
+                        <h5 id="case-name">iPhone 11 Silicone Case - Black</h5>
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
@@ -54,7 +55,8 @@
 
                         </div>
                         <h5>$<span id="case-price">00</span> </h5>
-                        <button id="remove-case-Button" class="button"><img src="images/remove.png" alt="" class="remove-item"></button>
+                        <button id="remove-case-Button" class="button"><img src="images/remove.png" alt=""
+                              class="remove-item"></button>
                      </div>
                   </div>
                </div>
@@ -76,14 +78,37 @@
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
+                  <button id="cheek-out-button" type="button" class="btn btn-success check-out">Check Out</button>
                </div>
             </div>
          </div>
       </div>
+      <div class=" text-center my-4 bg-info py-4 invoice">
+         <h1>invoice</h1>
+         <table class="table">
+            <thead>
+               <tr>
+                  <th scope="col">quantity</th>
+                  <th scope="col">name</th>
+                  <th scope="col">price</th>
+                  <th scope="col">total price(including-20%vat)</th>
+               </tr>
+            </thead>
+            <tbody id="info-table">
+               <!-- <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+               </tr> -->
+            </tbody>
+         </table>
+      </div>
    </section>
    <!-- extarnal jc -->
    <script src="./app.js"></script>
+
 </body>
 
 </html>
