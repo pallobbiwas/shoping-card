@@ -50,3 +50,27 @@ function subTotal() {
     inTotal.innerText = Number(taxValue.innerText) + Number(subTotal.innerText);
     
 }
+//
+document.getElementById('remove-case-Button').addEventListener('click',function(){
+    removeIteam('case-part');
+
+});
+
+document.getElementById('hide').addEventListener('click',function(){
+    reShow ('case-part')
+});
+
+//remove iteam function
+function removeIteam(removeId){
+    const phonePart = document.getElementById(removeId);
+    phonePart.style.display = 'none'
+    document.getElementById('hide').style.display = 'block'
+}
+
+//re showe iteam
+
+function reShow (hideId){
+    const phonePart = document.getElementById(hideId);
+    phonePart.style.display = 'flex'
+    document.getElementById('hide').style.display = 'none'
+}

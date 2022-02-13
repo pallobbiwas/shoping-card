@@ -58,3 +58,10 @@ body{
 	border: none;
 	background: none;
 }
+.f-hide{
+	display: none;
+	border: none;
+	background: none;
+	font-style: italic;
+	color: aqua;
+}
