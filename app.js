@@ -97,6 +97,7 @@ function reShow (hideId, moveAgain){
 //cheek out part
 
 document.getElementById('cheek-out-button').addEventListener('click',function(){
+    document.getElementById('invoice-part').style.display='block'
     // document.location.href = 'invoice.html'
     const infoTable = document.getElementById('info-table');
     const casecountNumber = document.getElementById('case-number');
@@ -119,9 +120,14 @@ document.getElementById('cheek-out-button').addEventListener('click',function(){
     td2.innerText = casecountPrice.innerText +' + '+ phonecountPrice.innerText;
     td3.innerText = inTotal.innerText
     //append
-    tr.appendChild(td1)
-    tr.appendChild(th)
-    tr.appendChild(td2)
-    tr.appendChild(td3)
-    infoTable.appendChild(tr)
-})
+    tr.appendChild(td1);
+    tr.appendChild(th);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    infoTable.appendChild(tr);
+});
+// hide
+document.getElementById('hide').addEventListener('click',function(){
+    document.getElementById('invoice-part').style.display='none'
+});
+//clear
