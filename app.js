@@ -26,7 +26,7 @@ function multiplication(inputId, casePriceInput,value,isit) {
         const casePrice = document.getElementById(casePriceInput);
         const casePriceNumber = Number(casePrice.innerText);
         // console.log(casePriceNumber);
-        casePrice.innerText = value * caseInputNumber;
+        casePrice.innerText = value * caseInputNumber;  
         
     }else if(isit == false){
         const caseInput = document.getElementById(inputId);
@@ -109,25 +109,41 @@ document.getElementById('cheek-out-button').addEventListener('click',function(){
     const phoneName = document.getElementById('phone-name');
     const inTotal = document.getElementById('total');
     //create table
-    const tr = document.createElement('tr')
-    const td1 = document.createElement('td')
-    const th = document.createElement('th')
-    const td2 = document.createElement('td')
-    const td3 = document.createElement('td')
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    const th = document.createElement('th');
+    const td2 = document.createElement('td');
+    const td3 = document.createElement('td');
+    const td4 = document.createElement('button');
     //add value
     td1.innerText = casecountNumber.value +" - "+ phonecountNumber.value;
     th.innerText = caseName.innerText +' & '+ phoneName.innerText;
     td2.innerText = casecountPrice.innerText +' + '+ phonecountPrice.innerText;
-    td3.innerText = inTotal.innerText
+    td3.innerText = inTotal.innerText;
+    td4.innerText = 'X'
+    td4.style.backgroundColor = 'white'
+    td4.style.color = 'red'
+    td4.style.fontWeight = 'bolder'
+    td4.setAttribute('id', 'choice');
+    console.log(td4);   
     //append
     tr.appendChild(td1);
     tr.appendChild(th);
     tr.appendChild(td2);
     tr.appendChild(td3);
+    tr.appendChild(td4);
     infoTable.appendChild(tr);
+    document.getElementById('hide').addEventListener('click',function(){
+        document.getElementById('invoice-part').style.display='none'
+    });
+
 });
 // hide
 document.getElementById('hide').addEventListener('click',function(){
     document.getElementById('invoice-part').style.display='none'
 });
+document.getElementById('choice').addEventListener('click', function(){
+    console.log('click');
+     });
+
 //clear
