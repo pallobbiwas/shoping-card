@@ -124,8 +124,7 @@ document.getElementById('cheek-out-button').addEventListener('click',function(){
     td4.style.backgroundColor = 'white'
     td4.style.color = 'red'
     td4.style.fontWeight = 'bolder'
-    td4.setAttribute('id', 'choice');
-    console.log(td4);   
+    td4.setAttribute('class', 'choice'); 
     //append
     tr.appendChild(td1);
     tr.appendChild(th);
@@ -136,14 +135,17 @@ document.getElementById('cheek-out-button').addEventListener('click',function(){
     document.getElementById('hide').addEventListener('click',function(){
         document.getElementById('invoice-part').style.display='none'
     });
-
+    const removeButtons = document.querySelectorAll('.choice');
+        // tr.innerText = '';
+        for(const removeButton of removeButtons){
+            removeButton.addEventListener('click',function(event){
+                tr.innerText = '';
+                event.stopImmediatePropagation();
+            })
+        }
 });
 // hide
 document.getElementById('hide').addEventListener('click',function(){
     document.getElementById('invoice-part').style.display='none'
 });
-document.getElementById('choice').addEventListener('click', function(){
-    console.log('click');
-     });
-
 //clear
